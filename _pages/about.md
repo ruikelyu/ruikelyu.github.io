@@ -35,7 +35,12 @@ research_areas:
 
 **Power Systems and Macro-Energy Systems Modeling for Industrial Demand Flexibility and Energy Infrastructure**
 
-I am currently a Postdoctoral Research Scientist in the Department of Earth and Environmental Engineering at Columbia University, working with [Prof. Bolun Xu](https://www.engineering.columbia.edu/faculty-staff/directory/bolun-xu). I received my Ph.D. in Electrical Engineering from Tsinghua University, advised by [Prof. Chongqing Kang](https://www.eea.tsinghua.edu.cn/faculties/cqkang.htm). Before joining Columbia, I held research appointments at The Hong Kong Polytechnic University and Princeton University’s Andlinger Center for Energy and the Environment, where I worked with [Prof. Jesse Jenkins](https://engineering.princeton.edu/faculty/jesse-jenkins).
+I am currently a Postdoctoral Research Scientist in the Department of Earth and Environmental Engineering at Columbia University, working with [Prof. Bolun Xu](https://www.engineering.columbia.edu/faculty-staff/directory/bolun-xu). I received my Ph.D. in Electrical Engineering from Tsinghua University, advised by [Prof. Chongqing Kang](https://www.eea.tsinghua.edu.cn/en/faculties/cqkang.htm). Before joining Columbia, I held research appointments at The Hong Kong Polytechnic University, where I worked with [Dr. Ziqing Zhu](https://www.polyu.edu.hk/eee/people/academic-staff-and-teaching-staff/dr-zhu-ziqing) and [Prof. Siqi Bu](https://www.polyu.edu.hk/eee/people/academic-staff-and-teaching-staff/prof-bu-siqi), and Princeton University’s Andlinger Center for Energy and the Environment, where I worked with [Prof. Jesse Jenkins](https://mae.princeton.edu/people/jesse-jenkins).
+
+**Contact**<br>
+Mudd 1038G, [500 W 120th St](https://www.google.com/maps/search/500+W+120th+St?entry=gmail&source=g), New York, NY 10027<br>
+Tel: [+1 (609) 436-8628](tel:+16094368628)<br>
+Email: [rl3763@columbia.edu](mailto:rl3763@columbia.edu)
 
 My research examines how energy infrastructure and the systems it serves can be co-designed to enable a reliable and affordable transition to clean energy. Grounded in power systems, optimization, and electricity markets, I focus particularly on the interaction between electricity infrastructure and flexible industrial demand. I combine macro-energy systems optimization, engineering models of industrial processes, and empirical analysis of smart-meter data to develop physically grounded, scalable representations of demand flexibility and assess its value to energy-system planning and operations.
 

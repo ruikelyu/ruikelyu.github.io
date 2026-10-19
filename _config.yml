@@ -26,7 +26,9 @@ author:
   name             : "Ruike Lyu"
   pronouns         : "he/him"  
   bio              : "Energy systems researcher and Postdoctoral Research Scientist at Columbia University, combining power systems and macro-energy systems modeling to study industrial demand flexibility and energy infrastructure."
-  location         :
+  address          : "Mudd 1038G, 500 W 120th St, New York, NY 10027"
+  address_url      : "https://www.google.com/maps/search/500+W+120th+St?entry=gmail&source=g"
+  phone            : "+1 (609) 436-8628"
   employer         : "Columbia University"
   # uri              : # URL
   email            : "rl3763@columbia.edu"

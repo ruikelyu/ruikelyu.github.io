@@ -15,16 +15,17 @@ redirect_from:
 Research Appointments
 ======
 * Postdoctoral Research Scientist, Department of Earth and Environmental Engineering, Columbia University, Oct. 2026 – Present
-  * Postdoctoral Advisor: Prof. Bolun Xu
+  * Postdoctoral Advisor: [Prof. Bolun Xu](https://www.engineering.columbia.edu/faculty-staff/directory/bolun-xu)
 * Postdoctoral Research Associate, Department of Electrical and Electronic Engineering, The Hong Kong Polytechnic University, Jul. 2026 – Sept. 2026
+  * Research Advisors: [Dr. Ziqing Zhu](https://www.polyu.edu.hk/eee/people/academic-staff-and-teaching-staff/dr-zhu-ziqing) and [Prof. Siqi Bu](https://www.polyu.edu.hk/eee/people/academic-staff-and-teaching-staff/prof-bu-siqi)
 * Visiting Research Collaborator, Andlinger Center for Energy and the Environment, Princeton University, Mar. 2025 – Feb. 2026
-  * Faculty Host: Prof. Jesse Jenkins
+  * Faculty Host: [Prof. Jesse Jenkins](https://mae.princeton.edu/people/jesse-jenkins)
 
 Education
 ======
 * Ph.D. in Electrical Engineering, Tsinghua University, China, Sept. 2021 – Jun. 2026
   * Graduated with the university's highest honor for graduates
-  * Ph.D. Advisor: Prof. Chongqing Kang
+  * Ph.D. Advisor: [Prof. Chongqing Kang](https://www.eea.tsinghua.edu.cn/en/faculties/cqkang.htm)
   * Ph.D. dissertation: [Industrial Load Modeling and Optimization Decision-Making Methods for Market-Based Interaction](https://arxiv.org/abs/2608.15076)
   * Dissertation defense slides: [Download]({{ base_path }}/files/Slides_phd_disseration_defense_Ruike_Lyu.pdf)
 * B.E. in Electrical Engineering, Tsinghua University, China, Sept. 2017 – Jun. 2021
