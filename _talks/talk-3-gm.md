@@ -40,5 +40,5 @@ This research helps to better leverage the flexibility of DERs in power systems,
 [2024 IEEE PES General Meeting](https://pes-gm.org/seattle-2024/)
 
 ### Research Repository (code and slides)
-[GitHub: Approximating Feasible Region of Virtual Power Plants](https://github.com/Rick10119/Approximating-Feasible-Region-of-Virtual-Power-Plants-A-Data-driven-Approach)
+[GitHub: Approximating Feasible Region of Virtual Power Plants](https://github.com/ruikelyu/Approximating-Feasible-Region-of-Virtual-Power-Plants-A-Data-driven-Approach)
 

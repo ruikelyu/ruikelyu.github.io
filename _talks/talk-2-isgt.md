@@ -39,4 +39,4 @@ Industrial production modeling provides operational constraints for industrial u
 
 ### Code, Data and Slides
 All materials related to this presentation are available in this GitHub repository:
-[Industrial User Modeling Toolkit - LSTN MATLAB](https://github.com/Rick10119/Industrial-User-Modeling-Toolkit/tree/main/LSTN_matlab)
+[Industrial User Modeling Toolkit - LSTN MATLAB](https://github.com/ruikelyu/Industrial-User-Modeling-Toolkit/tree/main/LSTN_matlab)

@@ -13,9 +13,9 @@ title                    : "Ruike Lyu | Energy Systems Researcher"
 title_separator          : "-"
 name                     : &name "Ruike Lyu"
 description              : &description "Energy systems research combining power systems and macro-energy systems modeling to study industrial demand flexibility and energy infrastructure"
-url                      : https://rick10119.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : https://ruikelyu.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "rick10119/rick10119.github.io"
+repository               : "ruikelyu/ruikelyu.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -46,7 +46,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "Rick10119"
+  github           : "ruikelyu"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -147,7 +147,7 @@ social:
     - "https://scholar.google.com/citations?user=TPyjGZYAAAAJ&hl=en&oi=ao"
     - "http://orcid.org/0000-0003-3749-1117"
     - "https://www.researchgate.net/profile/Ruike_Lyu"
-    - "https://github.com/Rick10119"
+    - "https://github.com/ruikelyu"
     - "https://www.linkedin.com/in/ruike-lyu"
 
 

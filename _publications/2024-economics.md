@@ -38,7 +38,7 @@ This co-optimization approach balances:
 - Future profits affected by bidding strategies
 - The interdependence between bidding and control decisions
 
-[TSG-2023](https://ieeexplore.ieee.org/document/10059168) [Github (code and slides)](https://github.com/Rick10119/Co-Optimizing-Bidding-and-Power-Allocation-of-an-EV-Aggregator) [Video](https://www.bilibili.com/video/BV1u3QDYFEKi)
+[TSG-2023](https://ieeexplore.ieee.org/document/10059168) [Github (code and slides)](https://github.com/ruikelyu/Co-Optimizing-Bidding-and-Power-Allocation-of-an-EV-Aggregator) [Video](https://www.bilibili.com/video/BV1u3QDYFEKi)
 
 ## Real-Time Implementation Strategy
 
@@ -48,7 +48,7 @@ Building on the co-optimization framework, we implemented this approach in a cas
 2. **Error Compensation**: Accounting for errors introduced during parameter identification and dimension reduction
 3. **Computational Efficiency**: Developing strategies that can execute within tight time constraints
 
-[APEN-2024](https://www.sciencedirect.com/science/article/pii/S0306261924002599) [Github](https://github.com/Rick10119/Real-time-operation-strategy-of-virtual-power-plants) [Video](https://www.bilibili.com/video/BV1CpQDYDE67)
+[APEN-2024](https://www.sciencedirect.com/science/article/pii/S0306261924002599) [Github](https://github.com/ruikelyu/Real-time-operation-strategy-of-virtual-power-plants) [Video](https://www.bilibili.com/video/BV1CpQDYDE67)
 
 ## Arithmetic-Only Control Strategy
 

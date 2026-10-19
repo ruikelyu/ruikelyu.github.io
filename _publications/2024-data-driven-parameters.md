@@ -44,7 +44,7 @@ This work represents a significant paradigm shift in industrial load modeling. D
 
 We have open-sourced our methodology to enable other researchers and practitioners to apply these techniques:
 
-- **GitHub Repository**: [https://github.com/Rick10119/Production-Scheduling-Identification](https://github.com/Rick10119/Production-Scheduling-Identification)
+- **GitHub Repository**: [https://github.com/ruikelyu/Production-Scheduling-Identification](https://github.com/ruikelyu/Production-Scheduling-Identification)
 - **Explanation Video**: [Link to Bilibili video explaining the method](https://www.bilibili.com/video/BV1bXQDYcE8Y)
 
 ## Impact

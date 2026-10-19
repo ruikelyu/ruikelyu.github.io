@@ -54,7 +54,7 @@ Building on our STN work, we developed a "Continuous RTN" model that applies sim
 
 We have established GitHub repositories containing both the conventional models and our improved versions:
 
-[Link to STN/RTN models repository](https://github.com/Rick10119/Industrial-User-Modeling-Toolkit)
+[Link to STN/RTN models repository](https://github.com/ruikelyu/Industrial-User-Modeling-Toolkit)
 
 These repositories include implementation details, example data, and documentation to help other researchers apply our methods to their own industrial modeling problems.
 

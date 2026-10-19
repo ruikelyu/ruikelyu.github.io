@@ -30,7 +30,7 @@ I presented my research on "Co-Optimizing Bidding and Control Methods for Auxili
 
 ### Research Code and Data
 The code and data for this research are available in this GitHub repository:
-[Co-Optimizing Bidding and Power Allocation of an EV Aggregator](https://github.com/Rick10119/Co-Optimizing-Bidding-and-Power-Allocation-of-an-EV-Aggregator)
+[Co-Optimizing Bidding and Power Allocation of an EV Aggregator](https://github.com/ruikelyu/Co-Optimizing-Bidding-and-Power-Allocation-of-an-EV-Aggregator)
 
 ### News Coverage
 For more information about this forum:

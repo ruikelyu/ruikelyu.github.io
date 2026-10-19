@@ -31,6 +31,6 @@ In a steelmaking case, the reduced model replaced **10,208 integer variables wit
 ## Papers and open-source resources
 
 - [Efficient Scheduling of Discrete Industrial Processes through Continuous Modeling](https://ieeexplore.ieee.org/document/11082423)
-- [Production Scheduling Identification](https://ieeexplore.ieee.org/document/10769532) · [Code](https://github.com/Rick10119/Production-Scheduling-Identification)
-- [Data-Driven Dimension Reduction for Industrial Load Modeling](https://ieeexplore.ieee.org/document/10902053) · [Code](https://github.com/Rick10119/Data-Driven-Dimension-Reduction)
-- [Industrial User Modeling Toolkit](https://github.com/Rick10119/Industrial-User-Modeling-Toolkit)
+- [Production Scheduling Identification](https://ieeexplore.ieee.org/document/10769532) · [Code](https://github.com/ruikelyu/Production-Scheduling-Identification)
+- [Data-Driven Dimension Reduction for Industrial Load Modeling](https://ieeexplore.ieee.org/document/10902053) · [Code](https://github.com/ruikelyu/Data-Driven-Dimension-Reduction)
+- [Industrial User Modeling Toolkit](https://github.com/ruikelyu/Industrial-User-Modeling-Toolkit)
