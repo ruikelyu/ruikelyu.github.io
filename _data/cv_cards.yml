@@ -1,0 +1,41 @@
+# Entries shown as cards on the CV page (_includes/cv-entries.html).
+# logo: official mark under /images/logos/ (sources in images/logos/SOURCES.md); without one, a lettered
+# `badge` in `color` is shown.
+# people and notes are Markdown.
+
+appointments:
+  - title: "Postdoctoral Research Scientist"
+    org: "Department of Earth and Environmental Engineering, Columbia University"
+    dates: "2026/10 – Present"
+    logo: "logos/columbia.png"
+    people: "**Advisor:** [Prof. Bolun Xu](https://www.engineering.columbia.edu/faculty-staff/directory/bolun-xu)"
+  - title: "Postdoctoral Research Associate"
+    org: "Department of Electrical and Electronic Engineering, The Hong Kong Polytechnic University"
+    dates: "2026/07 – 2026/09"
+    logo: "logos/polyu.png"
+    people: "**Research advisors:** [Dr. Ziqing Zhu](https://www.polyu.edu.hk/eee/people/academic-staff-and-teaching-staff/dr-zhu-ziqing) and [Prof. Siqi Bu](https://www.polyu.edu.hk/eee/people/academic-staff-and-teaching-staff/prof-bu-siqi)"
+  - title: "Visiting Research Collaborator"
+    org: "Andlinger Center for Energy and the Environment, Princeton University"
+    dates: "2025/03 – 2026/02"
+    logo: "logos/princeton.png"
+    people: "**Faculty host:** [Prof. Jesse Jenkins](https://mae.princeton.edu/people/jesse-jenkins)"
+
+education:
+  - title: "Ph.D. in Electrical Engineering"
+    org: "Department of Electrical Engineering, Tsinghua University"
+    dates: "2021/09 – 2026/06"
+    logo: "logos/tsinghua.png"
+    people: "**Advisor:** [Prof. Chongqing Kang](https://www.eea.tsinghua.edu.cn/en/faculties/cqkang.htm)"
+    notes:
+      - "Graduated with the university's highest honor for graduates"
+      - "Dissertation: [Industrial Load Modeling and Optimization Decision-Making Methods for Market-Based Interaction](https://arxiv.org/abs/2608.15076) · [defense slides](/files/Slides_phd_disseration_defense_Ruike_Lyu.pdf)"
+  - title: "B.E. in Electrical Engineering"
+    org: "Department of Electrical Engineering, Tsinghua University"
+    dates: "2017/09 – 2021/06"
+    logo: "logos/tsinghua.png"
+    notes:
+      - "Graduated with honors"
+  - title: "Bachelor of Business Administration (Second Degree)"
+    org: "School of Economics and Management, Tsinghua University"
+    dates: "2018/09 – 2021/06"
+    logo: "logos/tsinghua.png"
