@@ -2,7 +2,7 @@
 
 <div class="project-card">
   <article class="project-card__inner" itemscope itemtype="http://schema.org/CreativeWork">
-    <a class="project-card__image" href="{{ post.url | relative_url }}" aria-label="View {{ project_title | strip_html }}">
+    <a class="project-card__image{% if post.teaser_fit == 'cover' %} project-card__image--cover{% endif %}" href="{{ post.url | relative_url }}" aria-label="View {{ project_title | strip_html }}">
       <img src="{{ post.teaser | relative_url }}" alt="{{ post.teaser_alt | default: project_title | strip_html }}">
     </a>
 

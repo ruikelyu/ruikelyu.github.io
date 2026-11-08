@@ -7,6 +7,7 @@ permalink: /projects/industrial-energy-management/
 redirect_from:
   - /portfolio/portfolio-1/
 teaser: /images/port1.jpg
+teaser_fit: cover
 teaser_alt: "Ruike Lyu discussing the industrial energy-management system with on-site engineers"
 category_label: "Implementation"
 ---
