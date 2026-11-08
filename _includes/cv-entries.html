@@ -1,0 +1,32 @@
+{%- comment -%} Cards for one section of _data/cv_cards.yml. Usage: {% include cv-entries.html section="education" %} {%- endcomment -%}
+{%- assign entries = site.data.cv_cards[include.section] -%}
+<div class="cv-entries">
+{%- for e in entries %}
+<div class="cv-entry">
+<div class="cv-entry__logo">
+{%- if e.logo -%}
+<img src="{{ e.logo | prepend: '/images/' | relative_url }}" alt="" loading="lazy">
+{%- else -%}
+<span class="cv-entry__badge" style="background-color: {{ e.color | default: '#7a8288' }}">{{ e.badge }}</span>
+{%- endif -%}
+</div>
+<div class="cv-entry__body">
+<div class="cv-entry__head">
+<h3 class="cv-entry__title">{{ e.title }}</h3>
+<span class="cv-entry__dates">{{ e.dates }}</span>
+</div>
+<p class="cv-entry__org">{{ e.org }}</p>
+{%- if e.people %}
+<p class="cv-entry__people">{{ e.people | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+{%- endif %}
+{%- if e.notes %}
+<ul class="cv-entry__notes">
+{%- for n in e.notes %}
+<li>{{ n | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+{%- endfor %}
+</ul>
+{%- endif %}
+</div>
+</div>
+{%- endfor %}
+</div>
