@@ -25,8 +25,13 @@ The central mechanism is that spare production capacity and product inventories 
 
 Across the investigated scenarios for China's aluminum sector, seasonal industrial flexibility reduced annual electricity-system costs by **CNY 23–32 billion**, equivalent to **11–15%** of the aluminum smelting industry's product value. The study was selected as the cover article of the August 2026 issue of *Nature Energy* and was discussed in a dedicated *Joule* Preview.
 
+## Video
+
+{% include youtube.html id="-oUnQs-s3AM" title="Industrial overcapacity can enable seasonal flexibility in electricity use" %}
+
 ## Research outputs
 
 - [Industrial overcapacity can enable seasonal flexibility in electricity use](https://www.nature.com/articles/s41560-026-02073-y), *Nature Energy*, 2026
 - [August 2026 issue cover](https://www.nature.com/nenergy/volumes/11/issues/8)
 - [Joule Preview](https://www.sciencedirect.com/science/article/pii/S2542435126003090)
+- [Explainer video](https://youtu.be/-oUnQs-s3AM) (YouTube)
