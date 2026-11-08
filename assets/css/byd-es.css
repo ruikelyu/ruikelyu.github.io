@@ -1,0 +1,30 @@
+.byd-es { margin: 1.5em 0 2em; font-size: 0.85em; }
+.byd-es__controls { display: grid; grid-template-columns: auto 1fr; gap: 0.6em 1em; align-items: center; margin-bottom: 1em; }
+.byd-es__label { color: var(--global-text-color-light); }
+.byd-es__seg { display: flex; flex-wrap: wrap; gap: 0.4em; }
+.byd-es__seg button {
+  font: inherit; font-size: 0.95em; padding: 0.35em 0.8em; cursor: pointer;
+  border: 1px solid var(--global-border-color); border-radius: 4px;
+  background: transparent; color: var(--global-text-color);
+}
+.byd-es__seg button:hover { border-color: var(--global-link-color); }
+.byd-es__seg button[aria-pressed="true"] {
+  border-color: var(--global-link-color); color: var(--global-link-color);
+  box-shadow: inset 0 0 0 1px var(--global-link-color);
+}
+.byd-es__kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.6em; margin-bottom: 1em; }
+.byd-es__kpi { border: 1px solid var(--global-border-color); border-radius: 4px; padding: 0.6em 0.8em; }
+.byd-es__kpi span { display: block; font-size: 0.85em; color: var(--global-text-color-light); }
+.byd-es__kpi strong { font-size: 1.5em; font-weight: 500; font-variant-numeric: tabular-nums; }
+.byd-es__legend { display: flex; flex-wrap: wrap; gap: 1.2em; font-size: 0.9em; color: var(--global-text-color-light); margin: 0.6em 0 0.3em; }
+.byd-es__legend i { display: inline-block; width: 14px; height: 10px; margin-right: 0.35em; vertical-align: -1px; border-radius: 2px; }
+.byd-es__legend i.line { height: 0; border-top: 2px solid; border-radius: 0; vertical-align: 3px; }
+.byd-es__legend i.dash { height: 0; border-top: 2px dashed; border-radius: 0; vertical-align: 3px; }
+.byd-es__chart { position: relative; height: 230px; }
+.byd-es__note { font-size: 0.9em; color: var(--global-text-color-light); margin-top: 0.6em; }
+.byd-es-figure { margin: 1.5em 0; }
+.byd-es-figure img { width: 100%; }
+.byd-es-figure figcaption { font-size: 0.8em; color: var(--global-text-color-light); margin-top: 0.4em; }
+.byd-es-table td, .byd-es-table th { text-align: right; font-variant-numeric: tabular-nums; }
+.byd-es-table td:first-child, .byd-es-table th:first-child { text-align: left; }
+.byd-es-table tr:last-child td { font-weight: 600; }
