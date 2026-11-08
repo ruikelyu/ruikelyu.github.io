@@ -26,7 +26,10 @@ impact_row:
 
 research_areas:
   - title: "Physically Grounded and Scalable Modeling"
-    excerpt: "Optimization methods that represent industrial production constraints while remaining tractable for power-system planning and operations."
+    excerpt: "Optimization methods that represent industrial production constraints while remaining tractable for power-system planning and operations. Open-source in **indflex**, with interactive demos."
+    url: "/projects/industrial-flexibility-modeling/"
+    btn_label: "Explore the toolkit"
+    btn_class: "btn--primary"
   - title: "Large Loads and Energy Infrastructure Planning"
     excerpt: "Co-optimizing production capacity, inventories, facility locations, computing workloads, and operating schedules with generation, storage, and grid investments."
   - title: "Markets and Institutions for Demand Flexibility"
