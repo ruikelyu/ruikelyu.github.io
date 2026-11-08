@@ -4,8 +4,8 @@ excerpt: "Open models and interactive demos of my PhD work on industrial demand 
 collection: portfolio
 order: 1
 permalink: /projects/industrial-flexibility-modeling/
-teaser: /images/pub1.png
-teaser_alt: "Diagram of the industrial production-process modeling framework"
+teaser: /images/indflex/crtn_gantt.png
+teaser_alt: "Gantt charts of three steelmaking heats scheduled by the RTN and cRTN models"
 category_label: "Modeling"
 ---
 

@@ -1,0 +1,275 @@
+/* ==========================================================================
+   SITE POLISH
+   One body-text size, one secondary size, equal-size panels, wider sidebar.
+   Loaded last so it overrides the theme defaults.
+
+   Type scale (rem, so nesting never changes it):
+     page title   1.563rem      section heading  1.25rem
+     panel title  1.25rem       body text        1rem
+     secondary    0.85rem  (captions, sidebar details, labels, footer)
+   ========================================================================== */
+
+$text-body: 1rem;
+$text-small: 0.85rem;
+$panel-radius: 8px;
+
+html {
+  font-size: 16px;
+
+  @include breakpoint($medium) {
+    font-size: 17px;
+  }
+}
+
+/* Headings
+   ========================================================================== */
+
+.page__title {
+  font-size: 1.563rem;
+}
+
+.page__content,
+.archive {
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  h4 {
+    font-size: $text-body;
+  }
+}
+
+/* Body text: one size everywhere in the main column
+   ========================================================================== */
+
+.page__content,
+.archive {
+  p,
+  li,
+  dl,
+  dd,
+  blockquote,
+  table {
+    font-size: $text-body;
+  }
+}
+
+table th,
+table td {
+  font-size: inherit;
+}
+
+/* On phones a wide table scrolls inside its own box instead of widening the page */
+@media (max-width: 767px) {
+  .page__content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.page__content figcaption,
+.page__content .ifx-figure figcaption,
+.page__content .byd-es-figure figcaption {
+  font-family: $sans-serif;
+  font-size: $text-small;
+  color: var(--global-text-color-light);
+}
+
+.page__content .byd-es-table--text {
+  font-size: $text-body;
+}
+
+/* Buttons: accent colour, no underline
+   ========================================================================== */
+
+.page__content a.btn,
+.archive a.btn {
+  text-decoration: none;
+}
+
+.btn--primary {
+  background-color: var(--global-link-color);
+
+  &:hover {
+    background-color: var(--global-link-color-hover, var(--global-link-color));
+    filter: brightness(0.9);
+  }
+}
+
+.btn--inverse {
+  color: var(--global-link-color) !important;
+  background-color: transparent;
+  border: 1px solid var(--global-link-color) !important;
+
+  &:hover {
+    color: #fff !important;
+    background-color: var(--global-link-color);
+  }
+}
+
+/* Panels (shared look for homepage rows, project cards, toolkit chain)
+   ========================================================================== */
+
+@mixin panel {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: $panel-radius;
+}
+
+/* Homepage feature rows become a grid of equal panels */
+.feature__wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 1.25rem;
+  margin: 1.5em 0 2.5em;
+  border-bottom: 0;
+
+  &::before,
+  &::after {
+    content: none !important;
+  }
+
+  @include breakpoint($small) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.feature__wrapper > .feature__item {
+  display: flex;
+  float: none !important;
+  clear: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  font-size: $text-body;
+
+  .archive__item {
+    @include panel;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.1rem 1.2rem 1.2rem;
+  }
+
+  .archive__item-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .archive__item-title {
+    margin: 0 0 0.6rem;
+    padding: 0;
+    border: 0;
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+  .archive__item-excerpt {
+    margin-bottom: 1rem;
+
+    p {
+      margin: 0;
+      font-size: $text-body;
+      line-height: 1.55;
+    }
+  }
+
+  .archive__item-body > p:last-child {
+    margin: auto 0 0;
+  }
+}
+
+/* Project cards: every card the same size, body-size text */
+.project-grid {
+  grid-auto-rows: 1fr;
+}
+
+.project-card__title {
+  font-size: 1.25rem;
+}
+
+.project-card__excerpt,
+.project-card__link {
+  font-size: $text-body;
+}
+
+.archive .project-card__category {
+  font-size: 0.75rem;
+}
+
+.project-card__image--cover {
+  padding: 0;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+/* Toolkit page: the four-step chain as a 2 x 2 grid of equal panels
+   (prefixed so it wins over indflex.css, which loads after this file) */
+.page__content .ifx-chain {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  font-size: $text-body;
+
+  a {
+    @include panel;
+    padding: 0.9rem 1.1rem;
+  }
+
+  @media (max-width: 560px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Wider sidebar
+   ========================================================================== */
+
+@include breakpoint($large) {
+  .sidebar {
+    @include span(3 of 12);
+  }
+
+  .page {
+    @include span(9 of 12 last);
+    @include prefix(0.5 of 12);
+    @include suffix(1 of 12);
+  }
+
+  .archive {
+    @include span(9 of 12 last);
+    @include prefix(0.5 of 12);
+  }
+}
+
+@include breakpoint($x-large) {
+  .sidebar {
+    max-width: 300px;
+  }
+}
+
+.sidebar {
+  p,
+  li {
+    font-size: $text-small;
+  }
+
+  .author__name {
+    font-size: 1.1rem;
+  }
+
+  .author__urls li {
+    white-space: normal;
+  }
+}
+
+.author__avatar img {
+  max-width: 200px;
+}
