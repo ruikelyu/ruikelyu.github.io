@@ -32,8 +32,14 @@ research_areas:
     btn_class: "btn--primary"
   - title: "Large Loads and Energy Infrastructure Planning"
     excerpt: "Co-optimizing production capacity, inventories, facility locations, computing workloads, and operating schedules with generation, storage, and grid investments."
+    url: "/projects/seasonal-industrial-flexibility/"
+    btn_label: "View the project"
+    btn_class: "btn--primary"
   - title: "Markets and Institutions for Demand Flexibility"
     excerpt: "Procurement mechanisms, contracts, and electricity markets that compensate firms for the capital, inventory, and operating costs of providing flexibility."
+    url: "/projects/valuing-demand-flexibility/"
+    btn_label: "View the project"
+    btn_class: "btn--primary"
 ---
 
 **Power Systems and Macro-Energy Systems Modeling for Industrial Demand Flexibility and Energy Infrastructure**
