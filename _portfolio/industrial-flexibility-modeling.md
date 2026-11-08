@@ -32,6 +32,8 @@ Industrial demand flexibility is governed by material flows, task sequences, inv
 
 <div id="ifx-lstn" class="ifx"></div>
 
+▶ [Watch the two-minute explainer](https://youtu.be/wMm-IgvIvhM)
+
 The LSTN's cost is a lower bound on the STN's and is within 1% on every day of July 2022. Because it is an LP, it scales to fleets of factories:
 
 <figure class="ifx-figure">
@@ -42,6 +44,8 @@ The LSTN's cost is a lower bound on the STN's and is within 1% on every day of J
 **Batch processes.** Steelmaking processes discrete *heats* that cannot be interrupted once melting starts. The conventional Resource-Task Network (RTN) models every task for every heat, and rounds task durations up to whole time slots. The **continuous RTN (cRTN)** tracks the *progress* of one shared task per stage, so a heat can finish in the middle of a slot and the model does not grow with the number of heats. The example below is the one-furnace case of the paper: two heats, flexible melting power.
 
 <div id="ifx-crtn" class="ifx"></div>
+
+▶ [Watch the two-minute explainer](https://youtu.be/RATnHWVbLwY)
 
 In scenario 2, the RTN must finish the second heat at a slot boundary, so it runs into an expensive hour. The cRTN melts both heats at high power in three cheap hours.
 
@@ -61,6 +65,8 @@ In scenario 2, the RTN must finish the second heat at a slot boundary, so it run
 
 <div id="ifx-psi" class="ifx"></div>
 
+▶ [Watch the two-minute explainer](https://youtu.be/gpxkEAigneE)
+
 The identified model recovers the rated powers and the daily output exactly, so its predicted response matches the true plant's. For real plants with many days of data, PSI cycles through the days and averages the estimates.
 
 ## 3. Dimension reduction {#dimension-reduction}
@@ -68,6 +74,8 @@ The identified model recovers the rated powers and the daily output exactly, so 
 A grid model cannot carry a detailed process model, with its binaries, for every factory. **Data-driven dimension reduction (D3R)** learns an *adjustable load fleet*: a few loads with power and daily-energy limits (four numbers each), whose optimal response to prices mimics the detailed model's. It is trained by inverse optimization on the detailed model's responses. Here, a one-load fleet is fitted to three days of a cement plant and checked on ten unseen days:
 
 <div id="ifx-d3r" class="ifx"></div>
+
+▶ [Watch the two-minute explainer](https://youtu.be/ClJwRWYXZfI)
 
 For a steelmaking plant, the paper replaces **10,208 integer variables with 24 continuous ones** at 3.6% error on test days. These are errors in optimal response, not feasibility guarantees: the detailed model turns the reduced model's decision into an executable schedule.
 
@@ -77,17 +85,19 @@ A virtual power plant pools EVs, storage, air conditioning, industrial productio
 
 <div id="ifx-vpp" class="ifx"></div>
 
+▶ [Watch the two-minute explainer](https://youtu.be/dFsv5i7JZIM)
+
 ## Try it yourself
 
-Every step has a notebook that runs in the browser on Google Colab, with nothing to install:
+Every step has a notebook that runs in the browser on Google Colab, with nothing to install, and a two-minute explainer video:
 
 | Step | Notebook | Video |
 |---|---|---|
-| STN vs. LSTN | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/01_stn_vs_lstn.ipynb) | |
-| RTN vs. cRTN | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/02_rtn_vs_crtn.ipynb) | [Bilibili](https://www.bilibili.com/video/BV1cdurzbEgi) |
-| PSI (needs a Gurobi license) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/03_psi.ipynb) | [Bilibili](https://www.bilibili.com/video/BV1bXQDYcE8Y) |
-| D3R | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/04_d3r.ipynb) | [Bilibili](https://www.bilibili.com/video/BV1JFQ1YwEsK) |
-| VPP | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/05_vpp.ipynb) | [Bilibili](https://www.bilibili.com/video/BV1CpQDYDE67) |
+| STN vs. LSTN | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/01_stn_vs_lstn.ipynb) | [YouTube](https://youtu.be/wMm-IgvIvhM) |
+| RTN vs. cRTN | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/02_rtn_vs_crtn.ipynb) | [YouTube](https://youtu.be/RATnHWVbLwY) · [Bilibili](https://www.bilibili.com/video/BV1cdurzbEgi) |
+| PSI (needs a Gurobi license) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/03_psi.ipynb) | [YouTube](https://youtu.be/gpxkEAigneE) · [Bilibili](https://www.bilibili.com/video/BV1bXQDYcE8Y) |
+| D3R | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/04_d3r.ipynb) | [YouTube](https://youtu.be/ClJwRWYXZfI) · [Bilibili](https://www.bilibili.com/video/BV1JFQ1YwEsK) |
+| VPP | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/05_vpp.ipynb) | [YouTube](https://youtu.be/dFsv5i7JZIM) · [Bilibili](https://www.bilibili.com/video/BV1CpQDYDE67) |
 
 The [toolkit's documentation](https://github.com/ruikelyu/indflex/tree/main/docs) explains each step, what it can and cannot claim, and how it was checked against the original paper code.
 

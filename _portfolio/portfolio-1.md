@@ -36,6 +36,10 @@ The work was conducted with the State Power Investment Corporation and the manuf
   <img src="{{ '/images/byd-es/system.svg' | relative_url }}" alt="Diagram of the grid, revenue meter, plant load, battery, and rooftop solar behind the meter">
 </figure>
 
+A two-minute explainer of the project (all charts use a synthetic plant):
+
+{% include youtube.html id="x0Zmy_rP5Uo" title="Scheduling a battery behind a factory's meter" %}
+
 ## Why the operating problem is hard
 
 The battery sits behind the plant's revenue meter, so it is never scheduled on its own: every kilowatt it charges or discharges adds to or subtracts from the plant's load, and the plant pays for the combined result. The savings are shared between the plant and the battery operator. The time-of-use tariff alone would say "fill the battery in every valley, empty it in every peak", which allows about two cycles a day. Several other pressures pull the schedule in different directions:
