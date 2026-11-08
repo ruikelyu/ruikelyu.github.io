@@ -11,7 +11,7 @@ category_label: "Modeling"
 
 <link rel="stylesheet" href="{{ '/assets/css/indflex.css' | relative_url }}">
 
-**Industrial demand flexibility: from process models to grid decisions.** [indflex](https://github.com/ruikelyu/indflex) is the open-source toolkit of my PhD thesis. It turns each step of the work into a Python implementation, checked against the original paper code, and an interactive notebook that runs in seconds to a few minutes. The demos on this page are precomputed with the toolkit and run in your browser.
+**Industrial demand flexibility: from process models to grid decisions.** [indflex](https://github.com/ruikelyu/indflex) is the open-source toolkit of my PhD thesis. It turns each step of the work into a Python implementation, checked against the original paper code, and an interactive notebook that runs in seconds to a few minutes. Each step below has a two-minute video, an interactive demo precomputed with the toolkit (it runs in your browser), and a notebook.
 
 ## The problem
 
@@ -28,11 +28,11 @@ Industrial demand flexibility is governed by material flows, task sequences, inv
 
 ## 1. Process models {#process-models}
 
+{% include youtube.html id="wMm-IgvIvhM" title="LSTN explainer" %}
+
 **Continuous processes.** A State-Task Network (STN) schedules each machine's operating mode with binary variables. Market intervals are much longer than mode switches, so the **LSTN** instead decides *how long* each machine spends in each mode within the hour. The binaries disappear and the scheduling problem becomes a linear program. Pick a day:
 
 <div id="ifx-lstn" class="ifx"></div>
-
-▶ [Watch the two-minute explainer](https://youtu.be/wMm-IgvIvhM)
 
 The LSTN's cost is a lower bound on the STN's and is within 1% on every day of July 2022. Because it is an LP, it scales to fleets of factories:
 
@@ -41,11 +41,11 @@ The LSTN's cost is a lower bound on the STN's and is within 1% on every day of J
   <figcaption>Solve time with the free HiGHS solver: the STN reaches a 30 s limit at 5 factories; the LSTN schedules 200 in about 10 s.</figcaption>
 </figure>
 
+{% include youtube.html id="RATnHWVbLwY" title="cRTN explainer" %}
+
 **Batch processes.** Steelmaking processes discrete *heats* that cannot be interrupted once melting starts. The conventional Resource-Task Network (RTN) models every task for every heat, and rounds task durations up to whole time slots. The **continuous RTN (cRTN)** tracks the *progress* of one shared task per stage, so a heat can finish in the middle of a slot and the model does not grow with the number of heats. The example below is the one-furnace case of the paper: two heats, flexible melting power.
 
 <div id="ifx-crtn" class="ifx"></div>
-
-▶ [Watch the two-minute explainer](https://youtu.be/RATnHWVbLwY)
 
 In scenario 2, the RTN must finish the second heat at a slot boundary, so it runs into an expensive hour. The cRTN melts both heats at high power in three cheap hours.
 
@@ -61,31 +61,31 @@ In scenario 2, the RTN must finish the second heat at a slot boundary, so it run
 
 ## 2. Parameter identification {#parameter-identification}
 
+{% include youtube.html id="gpxkEAigneE" title="PSI explainer" %}
+
 **Production scheduling identification (PSI)** assumes a factory minimizes its electricity cost and asks which plant parameters make that optimal schedule reproduce its meter data. The optimality conditions of the plant's scheduling problem become constraints of an *inverse* optimization problem, and the private parameters become its decision variables. Below, a two-machine plant is identified from **one day** of meter data in a single solve, and the identified model then predicts how the plant would respond to a demand-response event. Move the event:
 
 <div id="ifx-psi" class="ifx"></div>
-
-▶ [Watch the two-minute explainer](https://youtu.be/gpxkEAigneE)
 
 The identified model recovers the rated powers and the daily output exactly, so its predicted response matches the true plant's. For real plants with many days of data, PSI cycles through the days and averages the estimates.
 
 ## 3. Dimension reduction {#dimension-reduction}
 
+{% include youtube.html id="ClJwRWYXZfI" title="D3R explainer" %}
+
 A grid model cannot carry a detailed process model, with its binaries, for every factory. **Data-driven dimension reduction (D3R)** learns an *adjustable load fleet*: a few loads with power and daily-energy limits (four numbers each), whose optimal response to prices mimics the detailed model's. It is trained by inverse optimization on the detailed model's responses. Here, a one-load fleet is fitted to three days of a cement plant and checked on ten unseen days:
 
 <div id="ifx-d3r" class="ifx"></div>
-
-▶ [Watch the two-minute explainer](https://youtu.be/ClJwRWYXZfI)
 
 For a steelmaking plant, the paper replaces **10,208 integer variables with 24 continuous ones** at 3.6% error on test days. These are errors in optimal response, not feasibility guarantees: the detailed model turns the reduced model's decision into an executable schedule.
 
 ## 4. Virtual power plant {#virtual-power-plant}
 
+{% include youtube.html id="dFsv5i7JZIM" title="Virtual power plant explainer" %}
+
 A virtual power plant pools EVs, storage, air conditioning, industrial production stages and PV, and sells energy and frequency regulation. Every half hour it solves a bidding LP. When the grid operator then sends a regulation signal every two seconds, it must split the requested power among its resources at once. The bidding LP's dual variables price each resource's stored energy, which turns the split into a **merit order**: fill the cheapest power segments first. That is optimal, and takes microseconds instead of an LP solve. Press play to follow the first hour:
 
 <div id="ifx-vpp" class="ifx"></div>
-
-▶ [Watch the two-minute explainer](https://youtu.be/dFsv5i7JZIM)
 
 ## Try it yourself
 
