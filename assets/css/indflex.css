@@ -1,0 +1,42 @@
+/* Interactive demos for the indflex project page (same conventions as byd-es.css). */
+.ifx { margin: 1.2em 0 2em; font-size: 0.85em; }
+.ifx__controls { display: grid; grid-template-columns: auto 1fr; gap: 0.6em 1em; align-items: center; margin-bottom: 1em; }
+.ifx__label { color: var(--global-text-color-light); }
+.ifx__seg { display: flex; flex-wrap: wrap; gap: 0.4em; }
+.ifx__seg button, .ifx__play {
+  font: inherit; font-size: 0.95em; padding: 0.35em 0.8em; cursor: pointer;
+  border: 1px solid var(--global-border-color); border-radius: 4px;
+  background: transparent; color: var(--global-text-color);
+}
+.ifx__seg button:hover, .ifx__play:hover { border-color: var(--global-link-color); }
+.ifx__seg button[aria-pressed="true"] {
+  border-color: var(--global-link-color); color: var(--global-link-color);
+  box-shadow: inset 0 0 0 1px var(--global-link-color);
+}
+.ifx__range { display: flex; align-items: center; gap: 0.8em; }
+.ifx__range input[type="range"] { flex: 1; max-width: 420px; accent-color: var(--global-link-color); }
+.ifx__range output { font-variant-numeric: tabular-nums; min-width: 8em; }
+.ifx__kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.6em; margin-bottom: 1em; }
+.ifx__kpi { border: 1px solid var(--global-border-color); border-radius: 4px; padding: 0.6em 0.8em; }
+.ifx__kpi span { display: block; font-size: 0.85em; color: var(--global-text-color-light); }
+.ifx__kpi strong { font-size: 1.4em; font-weight: 500; font-variant-numeric: tabular-nums; }
+.ifx__legend { display: flex; flex-wrap: wrap; gap: 1.2em; font-size: 0.9em; color: var(--global-text-color-light); margin: 0.6em 0 0.3em; }
+.ifx__legend i { display: inline-block; width: 14px; height: 10px; margin-right: 0.35em; vertical-align: -1px; border-radius: 2px; }
+.ifx__legend i.line { height: 0; border-top: 2px solid; border-radius: 0; vertical-align: 3px; }
+.ifx__legend i.dash { height: 0; border-top: 2px dashed; border-radius: 0; vertical-align: 3px; }
+.ifx__legend i.dot { height: 0; border-top: 2px dotted; border-radius: 0; vertical-align: 3px; }
+.ifx__chart { position: relative; height: 230px; }
+.ifx__chart--small { height: 170px; }
+.ifx__grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2em; }
+@media (max-width: 760px) { .ifx__grid2 { grid-template-columns: 1fr; } }
+.ifx__canvas { width: 100%; height: 230px; display: block; }
+.ifx__note { font-size: 0.9em; color: var(--global-text-color-light); margin-top: 0.6em; }
+.ifx-chain { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6em; margin: 1.2em 0 1.6em; font-size: 0.8em; }
+@media (max-width: 760px) { .ifx-chain { grid-template-columns: 1fr 1fr; } }
+.ifx-chain a { display: block; border: 1px solid var(--global-border-color); border-radius: 4px; padding: 0.7em 0.8em; text-decoration: none; color: var(--global-text-color); }
+.ifx-chain a:hover { border-color: var(--global-link-color); }
+.ifx-chain b { display: block; color: var(--global-link-color); margin-bottom: 0.2em; }
+.ifx-links { font-size: 0.85em; }
+.ifx-figure { margin: 1.2em 0; }
+.ifx-figure img { width: 100%; }
+.ifx-figure figcaption { font-size: 0.8em; color: var(--global-text-color-light); margin-top: 0.4em; }
