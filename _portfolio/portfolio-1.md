@@ -13,7 +13,10 @@ category_label: "Implementation"
 
 <link rel="stylesheet" href="{{ '/assets/css/byd-es.css' | relative_url }}">
 
-![Project Implementation (discussing with on-site engineers)](/images/port1.jpg)
+<figure class="byd-es-figure">
+  <img src="{{ '/images/port1.jpg' | relative_url }}" alt="Ruike Lyu and an on-site engineer reviewing the monitoring screens in the control room">
+  <figcaption>Reviewing the system's operating data with an on-site engineer in the control room.</figcaption>
+</figure>
 
 ## The problem
 
@@ -33,14 +36,25 @@ The work was conducted with the State Power Investment Corporation and the manuf
   <img src="{{ '/images/byd-es/system.svg' | relative_url }}" alt="Diagram of the grid, revenue meter, plant load, battery, and rooftop solar behind the meter">
 </figure>
 
-## How the battery earns its keep
+## Why the operating problem is hard
 
-The battery sits behind the plant's revenue meter. It charges when electricity is cheap and discharges when it is expensive, which lowers the plant's bill; the savings are shared between the plant and the battery operator. Two physical requirements shape every schedule:
+The battery sits behind the plant's revenue meter, so it is never scheduled on its own: every kilowatt it charges or discharges adds to or subtracts from the plant's load, and the plant pays for the combined result. The savings are shared between the plant and the battery operator. The time-of-use tariff alone would say "fill the battery in every valley, empty it in every peak", which allows about two cycles a day. Several other pressures pull the schedule in different directions:
 
-- **Power-quality limits.** Large swings in battery power can trip alarms inside the plant, so charging and discharging are capped well below the battery's rating.
-- **A backup reserve.** Part of the stored energy is held back so production can continue if the grid curtails supply during summer peaks.
+<table class="byd-es-table byd-es-table--text">
+  <thead>
+    <tr><th>Pressure</th><th>What it asks of the battery</th><th>Why it conflicts</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Time-of-use prices</td><td>Charge fully when power is cheap; discharge fully when it is expensive</td><td>This is the source of value, and every other pressure limits it</td></tr>
+    <tr><td>Demand charge</td><td>Do not charge too hard on top of the plant's load</td><td>The month's single highest 15-minute demand sets this charge. Charging at full power during the valley creates a new peak, and one careless interval costs about a week of arbitrage savings</td></tr>
+    <tr><td>Outage and load-shedding risk</td><td>Hold energy in reserve during the summer and winter peak seasons, when the grid may curtail supply</td><td>Reserved energy cannot earn arbitrage savings, so the question is how much to hold, and in which months</td></tr>
+    <tr><td>Fluctuating plant load</td><td>Leave headroom for load swings, and follow the load when possible</td><td>The same charging power that is harmless at average load can set a new monthly peak during a load spike</td></tr>
+    <tr><td>Power-quality alarms</td><td>Keep charging and discharging well below the battery's rating</td><td>The plant's alarm thresholds, not the battery, cap the power, so a full cycle takes more hours</td></tr>
+    <tr><td>Manual operation</td><td>Run on rules that on-site staff can follow</td><td>An optimal schedule is useful only if operators can carry it out reliably every day</td></tr>
+  </tbody>
+</table>
 
-The plant's own load is almost flat around the clock, so the value lies in timing the battery against the time-of-use tariff. Under that tariff, the battery can complete about two cycles a day: overnight valley to midday peak, and evening shoulder to evening peak.
+The optimization therefore treats the battery and the plant as one system. It minimizes the plant's total bill, including both energy and demand charges, subject to the reserve requirement, the alarm limits, and the plant's load.
 
 ## What the optimization changed
 

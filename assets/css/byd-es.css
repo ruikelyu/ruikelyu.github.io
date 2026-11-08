@@ -28,3 +28,7 @@
 .byd-es-table td, .byd-es-table th { text-align: right; font-variant-numeric: tabular-nums; }
 .byd-es-table td:first-child, .byd-es-table th:first-child { text-align: left; }
 .byd-es-table tr:last-child td { font-weight: 600; }
+.byd-es-table--text { font-size: 0.85em; }
+.byd-es-table--text td, .byd-es-table--text th { text-align: left; vertical-align: top; }
+.byd-es-table--text tr:last-child td { font-weight: inherit; }
+.byd-es-table--text tr td:first-child { font-weight: 600; white-space: nowrap; }
