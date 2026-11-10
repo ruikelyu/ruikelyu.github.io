@@ -23,7 +23,7 @@ Industrial demand flexibility is governed by material flows, task sequences, inv
   <a href="#process-models"><b>1. Process models</b>STN and LSTN for continuous processes; RTN and cRTN for batch processes</a>
   <a href="#parameter-identification"><b>2. Parameter identification</b>Learn a factory's private parameters from hourly meter data</a>
   <a href="#dimension-reduction"><b>3. Dimension reduction</b>Replace a detailed model with a few numbers</a>
-  <a href="#virtual-power-plant"><b>4. Virtual power plant</b>Bid for regulation, then split the signal in microseconds</a>
+  <a href="#virtual-power-plant"><b>4. Virtual power plant</b>Bid for regulation, then split the signal in milliseconds</a>
 </div>
 
 ## 1. Process models {#process-models}
@@ -93,13 +93,13 @@ For a steelmaking plant, the paper replaces **10,208 integer variables with 24 c
 
 {% include youtube.html id="dFsv5i7JZIM" title="Virtual power plant explainer" %}
 
-A virtual power plant pools EVs, storage, air conditioning, industrial production stages and PV, and sells energy and frequency regulation. Every half hour it solves a bidding LP. When the grid operator then sends a regulation signal every two seconds, it must split the requested power among its resources at once. The bidding LP's dual variables price each resource's stored energy, which turns the split into a **merit order**: fill the cheapest power segments first. That is optimal, and takes microseconds instead of an LP solve. Press play to follow the first hour:
+A virtual power plant pools EVs, storage, air conditioning, industrial production stages and PV, and sells energy and frequency regulation. Every half hour it solves a bidding LP. When the grid operator then sends a regulation signal every two seconds, it must split the requested power among its resources at once. The bidding LP's dual variables price each resource's stored energy, which turns the split into a **merit order**: fill the cheapest power segments first. That is optimal, and takes milliseconds instead of an LP solve. Press play to follow the first hour:
 
 <div id="ifx-vpp" class="ifx"></div>
 
 <figure class="ifx-figure">
   <img src="{{ '/images/indflex/vpp_cube.png' | relative_url }}" alt="A cube of 24 hours by 20 scenarios by 10,000 resources collapses, through shadow prices, into one column of resources sorted by cost and filled up to the signal">
-  <figcaption>Why the split is fast. The bidding problem spans 24 hours, 20 regulation-signal scenarios and 10,000 resources (more than 20 million constraints). Its shadow prices fold the future hours and scenarios into each resource's cost, so every 2 seconds the dispatch only sorts resources by cost and fills up to the signal. In the thesis, this takes 2.7 ms for 15,000 resources.</figcaption>
+  <figcaption>Why the split is fast. The bidding problem spans 24 hours, 20 regulation-signal scenarios and 10,000 resources (more than 20 million constraints). Its shadow prices fold the future hours and scenarios into each resource's cost, so every 2 seconds the dispatch only sorts resources by cost and fills up to the signal. In the thesis tests, this takes about 3 ms for a fleet of 15,000 EVs.</figcaption>
 </figure>
 
 ## Try it yourself
