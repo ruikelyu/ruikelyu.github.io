@@ -78,15 +78,15 @@ The identified model recovers the rated powers and the daily output exactly, so 
 
 {% include youtube.html id="ClJwRWYXZfI" title="D3R explainer" %}
 
-A grid model cannot carry a detailed process model, with its binaries, for every factory. **Data-driven dimension reduction (D3R)** learns an *adjustable load fleet*: a few loads with power and daily-energy limits (four numbers each), whose optimal response to prices mimics the detailed model's. It is trained by inverse optimization on the detailed model's responses. Here, a one-load fleet is fitted to three days of a cement plant and checked on ten unseen days:
+A grid model cannot carry a detailed process model, with its binaries, for every factory. **Data-driven dimension reduction (D3R)** learns an *adjustable load fleet*: a few loads with power and daily-energy limits (four numbers each). Two sets of constraints count as similar when the same objective gives nearly the same optimal solution under both; for a factory, the objective is the electricity cost under each day's prices. The fleet is trained by inverse optimization on the detailed model's optimal solutions. Here, a one-load fleet is fitted to three days of a cement plant and checked on ten unseen days:
 
 <div id="ifx-d3r" class="ifx"></div>
 
-For a steelmaking plant, the paper replaces **10,208 integer variables with 24 continuous ones** at 3.6% error on test days. These are errors in optimal response, not feasibility guarantees: the detailed model turns the reduced model's decision into an executable schedule.
+For a steelmaking plant, the paper replaces **10,208 integer variables with 24 continuous ones** at 3.6% error on test days. These are errors in optimal solutions, not feasibility guarantees: the detailed model turns the reduced model's decision into an executable schedule.
 
 <figure class="ifx-figure">
   <img src="{{ '/images/indflex/d3r_approximations.png' | relative_url }}" alt="Inner, outer and least-error box approximations of a rounded feasible region">
-  <figcaption>Three ways to approximate a plant's feasible region with a simple box. The inner box leaves out feasible operation (gray); the outer box allows operation the plant cannot deliver (red); the least-error box has the smallest worst-case boundary distance and both kinds of error. D3R takes the least-error view, measured on optimal responses.</figcaption>
+  <figcaption>Three ways to approximate a plant's feasible region with a simple box. The inner box leaves out feasible operation (gray); the outer box allows operation the plant cannot deliver (red); the least-error box has the smallest worst-case boundary distance and both kinds of error. D3R takes the least-error view, measured on optimal solutions under the same objective.</figcaption>
 </figure>
 
 ## 4. Virtual power plant {#virtual-power-plant}
