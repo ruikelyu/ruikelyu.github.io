@@ -21,9 +21,15 @@ I developed a national-scale co-optimization framework linking industrial operat
 
 The central mechanism is that spare production capacity and product inventories allow energy-intensive industries to produce more when renewable electricity is abundant, store products, and reduce production when electricity supply is tight. This turns industrial overcapacity—usually viewed as an economic inefficiency—into a potential source of long-duration grid flexibility.
 
+<figure class="half">
+  <img src="{{ '/images/seasonal/seasonal_operation.png' | relative_url }}" alt="National smelter power is high from March to November and off in winter; aluminum stock builds up from March and is drawn down in winter">
+  <img src="{{ '/images/seasonal/overcapacity_tradeoff.png' | relative_url }}" alt="Power-system savings and smelter costs versus smelting capacity kept; net savings peak at 13 billion CNY per year">
+  <figcaption>Left: with spare capacity, smelters run from spring to autumn, build up aluminum stock, and shut down during the winter peak. Right: power-system savings grow with the smelting capacity kept, but so do the smelters' own costs; net savings peak at about CNY 13 billion per year near 30% overcapacity (2050, mid demand).</figcaption>
+</figure>
+
 ## Key result
 
-Across the investigated scenarios for China's aluminum sector, seasonal industrial flexibility reduced annual electricity-system costs by **CNY 23–32 billion**, equivalent to **11–15%** of the aluminum smelting industry's product value. The study was selected as the cover article of the August 2026 issue of *Nature Energy* and was discussed in a dedicated *Joule* Preview.
+Across the investigated scenarios for China's aluminum sector, seasonal industrial flexibility reduced annual electricity-system costs by **CNY 23–32 billion**, equivalent to **11–15%** of the aluminum smelting industry's product value. After subtracting the smelters' own costs, net savings peak at about **CNY 13 billion** per year with roughly 30% overcapacity. The study was selected as the cover article of the August 2026 issue of *Nature Energy* and was discussed in a dedicated *Joule* Preview.
 
 ## Video
 

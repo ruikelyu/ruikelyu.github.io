@@ -63,6 +63,11 @@ In scenario 2, the RTN must finish the second heat at a slot boundary, so it run
 
 {% include youtube.html id="gpxkEAigneE" title="PSI explainer" %}
 
+<figure class="ifx-figure">
+  <img src="{{ '/images/indflex/psi_meter_data.png' | relative_url }}" alt="Load disaggregation needs a high-frequency trace; the grid has 24 hourly readings a day; the plant's stage powers, buffers, production target and number of stages are unknown">
+  <figcaption>What identification has to work with. Load-disaggregation methods (NILM) need high-frequency traces; a grid operator has 24 hourly readings a day, and the plant's parameters are private. The top trace is illustrative; the hourly data are the steel-powder test case of the thesis.</figcaption>
+</figure>
+
 **Production scheduling identification (PSI)** assumes a factory minimizes its electricity cost and asks which plant parameters make that optimal schedule reproduce its meter data. The optimality conditions of the plant's scheduling problem become constraints of an *inverse* optimization problem, and the private parameters become its decision variables. Below, a two-machine plant is identified from **one day** of meter data in a single solve, and the identified model then predicts how the plant would respond to a demand-response event. Move the event:
 
 <div id="ifx-psi" class="ifx"></div>
@@ -79,6 +84,11 @@ A grid model cannot carry a detailed process model, with its binaries, for every
 
 For a steelmaking plant, the paper replaces **10,208 integer variables with 24 continuous ones** at 3.6% error on test days. These are errors in optimal response, not feasibility guarantees: the detailed model turns the reduced model's decision into an executable schedule.
 
+<figure class="ifx-figure">
+  <img src="{{ '/images/indflex/d3r_approximations.png' | relative_url }}" alt="Inner, outer and least-error box approximations of a rounded feasible region">
+  <figcaption>Three ways to approximate a plant's feasible region with a simple box. The inner box leaves out feasible operation (gray); the outer box allows operation the plant cannot deliver (red); the least-error box has the smallest worst-case boundary distance and both kinds of error. D3R takes the least-error view, measured on optimal responses.</figcaption>
+</figure>
+
 ## 4. Virtual power plant {#virtual-power-plant}
 
 {% include youtube.html id="dFsv5i7JZIM" title="Virtual power plant explainer" %}
@@ -86,6 +96,11 @@ For a steelmaking plant, the paper replaces **10,208 integer variables with 24 c
 A virtual power plant pools EVs, storage, air conditioning, industrial production stages and PV, and sells energy and frequency regulation. Every half hour it solves a bidding LP. When the grid operator then sends a regulation signal every two seconds, it must split the requested power among its resources at once. The bidding LP's dual variables price each resource's stored energy, which turns the split into a **merit order**: fill the cheapest power segments first. That is optimal, and takes microseconds instead of an LP solve. Press play to follow the first hour:
 
 <div id="ifx-vpp" class="ifx"></div>
+
+<figure class="ifx-figure">
+  <img src="{{ '/images/indflex/vpp_cube.png' | relative_url }}" alt="A cube of 24 hours by 20 scenarios by 10,000 resources collapses, through shadow prices, into one column of resources sorted by cost and filled up to the signal">
+  <figcaption>Why the split is fast. The bidding problem spans 24 hours, 20 regulation-signal scenarios and 10,000 resources (more than 20 million constraints). Its shadow prices fold the future hours and scenarios into each resource's cost, so every 2 seconds the dispatch only sorts resources by cost and fills up to the signal. In the thesis, this takes 2.7 ms for 15,000 resources.</figcaption>
+</figure>
 
 ## Try it yourself
 
