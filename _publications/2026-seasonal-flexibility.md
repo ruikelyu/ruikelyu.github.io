@@ -58,7 +58,7 @@ The aluminum smelting case provides an entry point, but the broader idea may als
 ## Resources
 
 - **Published Paper**: [Nature Energy](https://www.nature.com/articles/s41560-026-02073-y)
-- **Explainer Video**: [YouTube](https://youtu.be/-oUnQs-s3AM)
+- **Explainer Video**: [YouTube](https://youtu.be/tb4MBBRFKvk)
 - **Chinese News Release**: [Tsinghua EILAB news draft](https://www.eea.tsinghua.edu.cn/info/1038/6897.htm)
 
 ## Citation

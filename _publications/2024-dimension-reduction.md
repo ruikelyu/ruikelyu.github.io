@@ -46,7 +46,7 @@ Our work in this area includes:
 
 2. **Initial Data-Driven Applications**: We first applied data-driven methods to electric vehicles in a [PES General Meeting conference paper](https://ieeexplore.ieee.org/document/10689111). [Codes](https://github.com/ruikelyu/Approximating-Feasible-Region-of-Virtual-Power-Plants-A-Data-driven-Approach)
 
-3. **Industrial Load Application**: We recently published a paper in [IEEE Power & Energy Letters](https://ieeexplore.ieee.org/document/10902053) applying this approach to industrial loads. [Codes](https://github.com/ruikelyu/Data-Driven-Dimension-Reduction) [Explanation Video](https://www.bilibili.com/video/BV1JFQ1YwEsK) [YouTube](https://youtu.be/ClJwRWYXZfI)
+3. **Industrial Load Application**: We recently published a paper in [IEEE Power & Energy Letters](https://ieeexplore.ieee.org/document/10902053) applying this approach to industrial loads. [Codes](https://github.com/ruikelyu/Data-Driven-Dimension-Reduction) [Explanation Video](https://www.bilibili.com/video/BV1JFQ1YwEsK) [YouTube](https://youtu.be/tLNliWvT6i8)
 
 4. **Mining Industry Case Study**: For the 2025 PES General Meeting, we have submitted [a paper using our method in mining applications](https://arxiv.org/abs/2503.00701).
 

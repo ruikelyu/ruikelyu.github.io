@@ -33,11 +33,11 @@ Across the investigated scenarios for China's aluminum sector, seasonal industri
 
 ## Video
 
-{% include youtube.html id="-oUnQs-s3AM" title="Industrial overcapacity can enable seasonal flexibility in electricity use" %}
+{% include youtube.html id="tb4MBBRFKvk" title="Industrial overcapacity can enable seasonal flexibility in electricity use" %}
 
 ## Research outputs
 
 - [Industrial overcapacity can enable seasonal flexibility in electricity use](https://www.nature.com/articles/s41560-026-02073-y), *Nature Energy*, 2026
 - [August 2026 issue cover](https://www.nature.com/nenergy/volumes/11/issues/8)
 - [Joule Preview](https://www.sciencedirect.com/science/article/pii/S2542435126003090)
-- [Explainer video](https://youtu.be/-oUnQs-s3AM) (YouTube)
+- [Explainer video](https://youtu.be/tb4MBBRFKvk) (YouTube)

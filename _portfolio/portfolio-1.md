@@ -39,7 +39,7 @@ The work was conducted with the State Power Investment Corporation and the manuf
 
 A two-minute explainer of the project (all charts use a synthetic plant):
 
-{% include youtube.html id="x0Zmy_rP5Uo" title="Scheduling a battery behind a factory's meter" %}
+{% include youtube.html id="l2rJKD26TOI" title="Scheduling a battery behind a factory's meter" %}
 
 ## Why the operating problem is hard
 
