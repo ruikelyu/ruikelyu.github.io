@@ -42,13 +42,13 @@ The results demonstrate that our linearized models maintain high accuracy while 
 
 Our first approach focused on the State-Task Network model, creating a "Linear STN" that significantly reduces computational complexity through strategic linearization techniques. This work was published as a conference paper:
 
-[LSTN-Paper](https://ieeexplore.ieee.org/document/10408608) [Video](https://youtu.be/wMm-IgvIvhM)
+[LSTN-Paper](https://ieeexplore.ieee.org/document/10408608) [Video](https://youtu.be/QwHTS2DnenQ)
 
 ### Continuous RTN Model
 
 Building on our STN work, we developed a "Continuous RTN" model that applies similar principles to the more complex Resource-Task Network framework. A systematic reconstruction of the Resource-Task Network (RTN) model – the first in over three decades since its inception. We've achieved at least a 10x speedup while maintaining accuracy. For those in steelmaking and beyond who have worked with RTN, we invite you to explore our new model:
 
-[cRTN-Paper](https://ieeexplore.ieee.org/document/11082423) [Video](https://youtu.be/RATnHWVbLwY)
+[cRTN-Paper](https://ieeexplore.ieee.org/document/11082423) [Video](https://youtu.be/TZ0LXch5aPw)
 
 ## Open-Source Implementation
 

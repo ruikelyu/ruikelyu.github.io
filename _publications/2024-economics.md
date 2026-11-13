@@ -48,7 +48,7 @@ Building on the co-optimization framework, we implemented this approach in a cas
 2. **Error Compensation**: Accounting for errors introduced during parameter identification and dimension reduction
 3. **Computational Efficiency**: Developing strategies that can execute within tight time constraints
 
-[APEN-2024](https://www.sciencedirect.com/science/article/pii/S0306261924002599) [Github](https://github.com/ruikelyu/Real-time-operation-strategy-of-virtual-power-plants) [Video](https://www.bilibili.com/video/BV1CpQDYDE67) [YouTube](https://youtu.be/dFsv5i7JZIM)
+[APEN-2024](https://www.sciencedirect.com/science/article/pii/S0306261924002599) [Github](https://github.com/ruikelyu/Real-time-operation-strategy-of-virtual-power-plants) [Video](https://www.bilibili.com/video/BV1CpQDYDE67) [YouTube](https://youtu.be/uDk0lgekcLo)
 
 ## Arithmetic-Only Control Strategy
 

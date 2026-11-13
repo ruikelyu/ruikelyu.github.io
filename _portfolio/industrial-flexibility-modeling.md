@@ -28,7 +28,7 @@ Industrial demand flexibility is governed by material flows, task sequences, inv
 
 ## 1. Process models {#process-models}
 
-{% include youtube.html id="wMm-IgvIvhM" title="LSTN explainer" %}
+{% include youtube.html id="QwHTS2DnenQ" title="LSTN explainer" %}
 
 **Continuous processes.** A State-Task Network (STN) schedules each machine's operating mode with binary variables. Market intervals are much longer than mode switches, so the **LSTN** instead decides *how long* each machine spends in each mode within the hour. The binaries disappear and the scheduling problem becomes a linear program. Pick a day:
 
@@ -41,7 +41,7 @@ The LSTN's cost is a lower bound on the STN's and is within 1% on every day of J
   <figcaption>Solve time with the free HiGHS solver: the STN reaches a 30 s limit at 5 factories; the LSTN schedules 200 in about 10 s.</figcaption>
 </figure>
 
-{% include youtube.html id="RATnHWVbLwY" title="cRTN explainer" %}
+{% include youtube.html id="TZ0LXch5aPw" title="cRTN explainer" %}
 
 **Batch processes.** Steelmaking processes discrete *heats* that cannot be interrupted once melting starts. The conventional Resource-Task Network (RTN) models every task for every heat, and rounds task durations up to whole time slots. The **continuous RTN (cRTN)** tracks the *progress* of one shared task per stage, so a heat can finish in the middle of a slot and the model does not grow with the number of heats. The example below is the one-furnace case of the paper: two heats, flexible melting power.
 
@@ -61,7 +61,7 @@ In scenario 2, the RTN must finish the second heat at a slot boundary, so it run
 
 ## 2. Parameter identification {#parameter-identification}
 
-{% include youtube.html id="gpxkEAigneE" title="PSI explainer" %}
+{% include youtube.html id="zhWvC3sqh4s" title="PSI explainer" %}
 
 <figure class="ifx-figure">
   <img src="{{ '/images/indflex/psi_meter_data.png' | relative_url }}" alt="Load disaggregation needs a high-frequency trace; the grid has 24 hourly readings a day; the plant's stage powers, buffers, production target and number of stages are unknown">
@@ -76,7 +76,7 @@ The identified model recovers the rated powers and the daily output exactly, so 
 
 ## 3. Dimension reduction {#dimension-reduction}
 
-{% include youtube.html id="ClJwRWYXZfI" title="D3R explainer" %}
+{% include youtube.html id="tLNliWvT6i8" title="D3R explainer" %}
 
 A grid model cannot carry a detailed process model, with its binaries, for every factory. **Data-driven dimension reduction (D3R)** learns an *adjustable load fleet*: a few loads with power and daily-energy limits (four numbers each). Two sets of constraints count as similar when the same objective gives nearly the same optimal solution under both; for a factory, the objective is the electricity cost under each day's prices. The fleet is trained by inverse optimization on the detailed model's optimal solutions. Here, a one-load fleet is fitted to three days of a cement plant and checked on ten unseen days:
 
@@ -91,7 +91,7 @@ For a steelmaking plant, the paper replaces **10,208 integer variables with 24 c
 
 ## 4. Virtual power plant {#virtual-power-plant}
 
-{% include youtube.html id="dFsv5i7JZIM" title="Virtual power plant explainer" %}
+{% include youtube.html id="uDk0lgekcLo" title="Virtual power plant explainer" %}
 
 A virtual power plant pools EVs, storage, air conditioning, industrial production stages and PV, and sells energy and frequency regulation. Every half hour it solves a bidding LP. When the grid operator then sends a regulation signal every two seconds, it must split the requested power among its resources at once. The bidding LP's dual variables price each resource's stored energy, which turns the split into a **merit order**: fill the cheapest power segments first. That is optimal, and takes milliseconds instead of an LP solve. Press play to follow the first hour:
 
@@ -108,11 +108,11 @@ Every step has a notebook that runs in the browser on Google Colab, with nothing
 
 | Step | Notebook | Video |
 |---|---|---|
-| STN vs. LSTN | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/01_stn_vs_lstn.ipynb) | [YouTube](https://youtu.be/wMm-IgvIvhM) |
-| RTN vs. cRTN | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/02_rtn_vs_crtn.ipynb) | [YouTube](https://youtu.be/RATnHWVbLwY) · [Bilibili](https://www.bilibili.com/video/BV1cdurzbEgi) |
-| PSI (needs a Gurobi license) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/03_psi.ipynb) | [YouTube](https://youtu.be/gpxkEAigneE) · [Bilibili](https://www.bilibili.com/video/BV1bXQDYcE8Y) |
-| D3R | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/04_d3r.ipynb) | [YouTube](https://youtu.be/ClJwRWYXZfI) · [Bilibili](https://www.bilibili.com/video/BV1JFQ1YwEsK) |
-| VPP | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/05_vpp.ipynb) | [YouTube](https://youtu.be/dFsv5i7JZIM) · [Bilibili](https://www.bilibili.com/video/BV1CpQDYDE67) |
+| STN vs. LSTN | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/01_stn_vs_lstn.ipynb) | [YouTube](https://youtu.be/QwHTS2DnenQ) |
+| RTN vs. cRTN | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/02_rtn_vs_crtn.ipynb) | [YouTube](https://youtu.be/TZ0LXch5aPw) · [Bilibili](https://www.bilibili.com/video/BV1cdurzbEgi) |
+| PSI (needs a Gurobi license) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/03_psi.ipynb) | [YouTube](https://youtu.be/zhWvC3sqh4s) · [Bilibili](https://www.bilibili.com/video/BV1bXQDYcE8Y) |
+| D3R | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/04_d3r.ipynb) | [YouTube](https://youtu.be/tLNliWvT6i8) · [Bilibili](https://www.bilibili.com/video/BV1JFQ1YwEsK) |
+| VPP | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ruikelyu/indflex/blob/main/notebooks/05_vpp.ipynb) | [YouTube](https://youtu.be/uDk0lgekcLo) · [Bilibili](https://www.bilibili.com/video/BV1CpQDYDE67) |
 
 The [toolkit's documentation](https://github.com/ruikelyu/indflex/tree/main/docs) explains each step, what it can and cannot claim, and how it was checked against the original paper code.
 
