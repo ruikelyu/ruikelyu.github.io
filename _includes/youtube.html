@@ -1,0 +1,7 @@
+{%- comment -%} Responsive YouTube embed: {% include youtube.html id="VIDEO_ID" title="..." %} {%- endcomment -%}
+<div style="position:relative;width:100%;max-width:800px;aspect-ratio:16/9;margin:1.25em 0;">
+  <iframe src="https://www.youtube-nocookie.com/embed/{{ include.id }}" title="{{ include.title | escape }}" loading="lazy"
+          style="position:absolute;inset:0;width:100%;height:100%;border:0;"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>

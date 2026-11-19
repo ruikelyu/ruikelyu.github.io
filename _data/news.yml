@@ -1,0 +1,39 @@
+- date: "11/2026"
+  text: "We released a new preprint on hosting distributed AI servers at factories. Scheduling AI workloads around production peaks needs about 60% less additional grid-interconnection capacity than new large data centers, and 98% less when tasks are routed among a group's factories."
+  url: "https://arxiv.org/abs/2611.18951"
+  link_label: "Read the preprint"
+
+- date: "10/2026"
+  text: "I joined the Xu Group at Columbia University as a Postdoctoral Research Scientist."
+  url: "https://bolunxu.github.io/"
+  link_label: "Visit the Xu Group"
+
+- date: "09/2026"
+  text: "Professor Jan Rosenow, Leader of the Energy Programme at the University of Oxford's Environmental Change Institute, published a *Joule* Preview discussing our *Nature Energy* study on industrial overcapacity and seasonal electricity flexibility."
+  url: "https://doi.org/10.1016/j.joule.2026.102625"
+  link_label: "Read the Preview"
+
+- date: "08/2026"
+  text: "Our study on industrial overcapacity and seasonal flexibility appeared as the cover article of the August 2026 issue of *Nature Energy*."
+  url: "https://www.nature.com/nenergy/volumes/11/issues/8"
+  link_label: "View the issue"
+
+- date: "08/2026"
+  text: "We released a new preprint comparing the levelized cost of demand flexibility with increasingly inexpensive battery storage."
+  url: "https://arxiv.org/abs/2608.07348"
+  link_label: "Read the preprint"
+
+- date: "06/2026"
+  text: "I completed my Ph.D. in Electrical Engineering at Tsinghua University, graduating with the university's highest honor for graduates."
+  url: "https://arxiv.org/abs/2608.15076"
+  link_label: "Read the dissertation"
+
+- date: "05/2026"
+  text: "I defended my Ph.D. dissertation on industrial load modeling and optimization decision-making for market-based grid interaction."
+  url: "/files/Slides_phd_disseration_defense_Ruike_Lyu.pdf"
+  link_label: "View the slides"
+
+- date: "02/2026"
+  text: "I presented our work on seasonal industrial flexibility at the MIT Energy Initiative and Harvard-China Project seminar."
+  url: "/talks/talk-5-mit-energy-initiative"
+  link_label: "View the talk"

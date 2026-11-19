@@ -1,0 +1,20 @@
+---
+layout: archive
+title: "Research Projects"
+description: "Research projects by Ruike Lyu on industrial demand flexibility, power-system planning, electricity markets, and real-world implementation."
+permalink: /projects/
+author_profile: false
+redirect_from:
+  - /portfolio/
+---
+
+{% include base_path %}
+
+My work connects four levels of the demand-flexibility problem: representing the physical constraints of large loads, quantifying their value to power systems, designing economic arrangements for dependable participation, and implementing optimization methods in real industrial settings.
+
+{% assign projects = site.portfolio | sort: "order" %}
+<div class="project-grid">
+  {% for post in projects %}
+    {% include archive-single-project.html %}
+  {% endfor %}
+</div>
