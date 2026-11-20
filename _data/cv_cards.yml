@@ -14,11 +14,6 @@ appointments:
     dates: "2026/07 – 2026/09"
     logo: "logos/polyu.png"
     people: "**Research advisors:** [Dr. Ziqing Zhu](https://www.polyu.edu.hk/eee/people/academic-staff-and-teaching-staff/dr-zhu-ziqing) and [Prof. Siqi Bu](https://www.polyu.edu.hk/eee/people/academic-staff-and-teaching-staff/prof-bu-siqi)"
-  - title: "Visiting Student Research Collaborator"
-    org: "Andlinger Center for Energy and the Environment, Princeton University"
-    dates: "2025/03 – 2026/02"
-    logo: "logos/princeton.png"
-    people: "**Advisor:** [Prof. Jesse Jenkins](https://mae.princeton.edu/people/jesse-jenkins)"
 
 education:
   - title: "Ph.D. in Electrical Engineering"
@@ -29,6 +24,11 @@ education:
     notes:
       - "Graduated with the university's highest honor for graduates"
       - "Dissertation: [Industrial Load Modeling and Optimization Decision-Making Methods for Market-Based Interaction](https://arxiv.org/abs/2608.15076) · [defense slides](/files/Slides_phd_disseration_defense_Ruike_Lyu.pdf)"
+  - title: "Visiting Student Research Collaborator"
+    org: "Andlinger Center for Energy and the Environment, Princeton University"
+    dates: "2025/03 – 2026/02"
+    logo: "logos/princeton.png"
+    people: "**Advisor:** [Prof. Jesse Jenkins](https://mae.princeton.edu/people/jesse-jenkins), as a member of the [ZERO Lab](https://zero.lab.princeton.edu/)"
   - title: "B.E. in Electrical Engineering"
     org: "Department of Electrical Engineering, Tsinghua University"
     dates: "2017/09 – 2021/06"

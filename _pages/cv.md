@@ -12,7 +12,7 @@ redirect_from:
 
 **📄 [Download CV (PDF)]({{ base_path }}/files/CV_Ruike_Lyu.pdf)**
 
-Research Experience
+Research Appointments
 ======
 
 {% include cv-entries.html section="appointments" %}
